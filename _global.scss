@@ -22,14 +22,3 @@ a {
     background-color: transparent;
     color: $light;
 }
-
-section {
-    padding: 30px 15px;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    section {
-        padding: 30px 70px;
-    }
-}
