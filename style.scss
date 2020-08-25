@@ -1,8 +1,19 @@
 @import "variable";
 @import "global";
 
-.bg {
+.hero-bg {
     background: $primaryGradient;
+}
+
+.footer-bg {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bg {
+        padding: 30px 70px;
+    }
 }
 
 //* HEADER
