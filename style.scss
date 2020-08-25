@@ -252,12 +252,12 @@
     width: 100%;
 
     .project-card {
-        box-shadow: 0 10px 30px -15px rgba(0,0,0,.5);
+        box-shadow: 0 10px 30px -15px rgba(0,0,0,.3);
         margin: 5px 0;
         flex-basis: 100%;
 
         &:hover {
-            box-shadow: 0 10px 30px -15px rgba(0,0,0,1);
+            box-shadow: 0 10px 30px -15px rgba(0,0,0,.6);
         }
     }
 }
@@ -274,6 +274,53 @@
     }
 }
 //! END PROJECTS
+
+//! EXPERIENCE
+.experience-card-main {
+    text-align: left;
+
+    .experience-card {
+        box-shadow: 0 10px 30px -15px rgba(0,0,0,.3);
+        margin: 5px 0;
+
+        &:hover {
+            box-shadow: 0 10px 30px -15px rgba(0,0,0,.6);
+        }
+
+        .experience-card-name {
+            display: flex;
+
+            .experience-card-name-left-logo {
+                width: 48px;
+                height: 48px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+//! END EXPERIENCE
+
+//! CONTACT
+.contact-icon {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    i {
+        font-size: 4em;
+        margin: 0 15px;
+
+        &:hover {
+            color: $primaryBtn;
+        }
+    }
+}
+//! END CONTACT
 //* END MAIN
 
 .hero-btn {

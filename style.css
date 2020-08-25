@@ -347,16 +347,16 @@ section {
 }
 
 .project-card-main .project-card {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
   margin: 5px 0;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
 .project-card-main .project-card:hover {
-  -webkit-box-shadow: 0 10px 30px -15px black;
-          box-shadow: 0 10px 30px -15px black;
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 992px) {
@@ -376,6 +376,60 @@ section {
     -ms-flex-preferred-size: 49.3%;
         flex-basis: 49.3%;
   }
+}
+
+.experience-card-main {
+  text-align: left;
+}
+
+.experience-card-main .experience-card {
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  margin: 5px 0;
+}
+
+.experience-card-main .experience-card:hover {
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+}
+
+.experience-card-main .experience-card .experience-card-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.experience-card-main .experience-card .experience-card-name .experience-card-name-left-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.experience-card-main .experience-card .experience-card-name .experience-card-name-left-logo img {
+  width: 100%;
+}
+
+.contact-icon {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-icon i {
+  font-size: 4em;
+  margin: 0 15px;
+}
+
+.contact-icon i:hover {
+  color: #0d6efd;
 }
 
 .hero-btn {
