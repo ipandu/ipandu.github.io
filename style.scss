@@ -228,7 +228,7 @@
 .skills-icons {
     margin: 15px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 
@@ -248,7 +248,6 @@
 .project-card-main {
     display: flex;
     flex-direction: column;
-    text-align: left;
     width: 100%;
 
     .project-card {
@@ -277,7 +276,6 @@
 
 //! EXPERIENCE
 .experience-card-main {
-    text-align: left;
 
     .experience-card {
         box-shadow: 0 10px 30px -15px rgba(0,0,0,.3);
@@ -307,7 +305,7 @@
 .contact-icon {
     margin: 15px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 
@@ -323,6 +321,33 @@
 //! END CONTACT
 //* END MAIN
 
+//* SECTION MENU TITLE
+section{
+    .section-menu {
+        display: flex;
+        overflow: hidden;
+
+        span {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: calc(100% + 10px);
+                top: 50%;
+                width: 2000px;
+                height: 2px;
+                background: tomato;
+            }
+        }
+        
+    }
+}
+//* END SECTION MENU
+
+//* BUTTON
 .hero-btn {
     position: relative;
     display: inline-block;
@@ -354,3 +379,4 @@
         width: 100%;
     }
 }
+//* END BUTTON

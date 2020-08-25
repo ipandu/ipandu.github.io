@@ -25,7 +25,6 @@ a {
 section {
   padding: 30px 15px;
   width: 100%;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -315,9 +314,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -342,7 +341,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: left;
   width: 100%;
 }
 
@@ -378,10 +376,6 @@ section {
   }
 }
 
-.experience-card-main {
-  text-align: left;
-}
-
 .experience-card-main .experience-card {
   -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
@@ -413,9 +407,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -430,6 +424,33 @@ section {
 
 .contact-icon i:hover {
   color: #0d6efd;
+}
+
+section .section-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+section .section-menu span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .section-menu span::after {
+  content: '';
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  width: 2000px;
+  height: 2px;
+  background: tomato;
 }
 
 .hero-btn {
