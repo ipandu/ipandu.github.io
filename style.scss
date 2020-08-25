@@ -22,8 +22,8 @@
     
     .navbar {
         width: 100%;
-        height: 70px;
-        padding: 10px 15px;
+        height: 100px;
+        padding: 0 70px;
         
         .nav-items {
             position: relative;
@@ -41,6 +41,10 @@
                 margin-right: 15px;
                 color: $light;
                 z-index: 0;
+
+                &:first-child {
+                    margin-right: auto;
+                }
 
                 &:last-child {
                     margin-right: 0;
@@ -203,7 +207,7 @@
 .hero {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
 
     .hero-text {
         order: 1;
