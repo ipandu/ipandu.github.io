@@ -224,6 +224,10 @@ main {
         &:nth-child(2) {
             margin: 50px 0 80px 0;
         }
+
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 
@@ -316,6 +320,19 @@ main {
 }
 //! END SKILL
 
+//! PROJECTS & EXPERIENCE CARD
+.project-card, .experience-card {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+    padding: 20px 50px;
+    transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+
+    &:hover {
+        box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+        transform: translateY(-3px);
+    }
+}
+//! END PROJECTS & EXPERIENCE CARD
+
 //! PROJECTS
 .project-card-main {
     display: flex;
@@ -324,12 +341,25 @@ main {
     margin: 30px 0;
 
     .project-card {
-        box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
         flex-basis: 100%;
-        padding: 20px 50px;
 
-        &:hover {
-            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+        .tags {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .tag {
+                border-radius: 3px;
+                padding: 3px 9px;
+                margin: 5px;
+                background: $lighter;
+                white-space: nowrap;
+
+                &:last-child {
+                    margin-right: unset;
+                }
+            }
         }
     }
 
@@ -350,15 +380,9 @@ main {
     margin: 30px 0;
 
     .experience-card {
-        box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-        padding: 20px 50px;
-
-        &:hover {
-            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-        }
-
         .experience-card-name {
             display: flex;
+            margin-bottom: 15px;
 
             .experience-card-name-left-logo {
                 width: 48px;
@@ -368,6 +392,17 @@ main {
                     width: 100%;
                 }
             }
+
+            .experience-card-name-right {
+                margin-left: 20px;
+            }
+        }
+
+        .experience-card-desc {
+            ul {
+                padding: 15px;
+                line-height: 2;
+            }
         }
     }
 }
@@ -375,7 +410,7 @@ main {
 
 //! CONTACT
 .contact-icon {
-    margin: 15px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -394,9 +429,8 @@ main {
 //* END MAIN
 
 //* SECTION MENU TITLE
-section {
+.wrapper {
     .section-menu {
-        display: flex;
         overflow: hidden;
 
         span {
@@ -408,7 +442,6 @@ section {
                 content: "";
                 position: absolute;
                 left: calc(100% + 10px);
-                top: 50%;
                 width: 2000px;
                 height: 2px;
                 background: $gradient;
@@ -416,7 +449,7 @@ section {
         }
     }
 }
-//* END SECTION MENU
+//* END SECTION MENU TITLE
 
 //* BUTTON
 .hero-btn {

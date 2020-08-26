@@ -31,7 +31,7 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -42,6 +42,16 @@ h2 {
 @media (min-width: 768px) {
   h2 {
     font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.4rem;
   }
 }
 
@@ -305,6 +315,10 @@ main .wrapper:nth-child(2) {
   margin: 50px 0 80px 0;
 }
 
+main .wrapper:last-child {
+  margin: 0;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +436,23 @@ main .wrapper:nth-child(2) {
   color: #17a2b8;
 }
 
+.project-card, .experience-card {
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  padding: 20px 50px;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+}
+
+.project-card:hover, .experience-card:hover {
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 .project-card-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,16 +466,34 @@ main .wrapper:nth-child(2) {
 }
 
 .project-card-main .project-card {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  padding: 20px 50px;
 }
 
-.project-card-main .project-card:hover {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+.project-card-main .project-card .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-card-main .project-card .tags .tag {
+  border-radius: 3px;
+  padding: 3px 9px;
+  margin: 5px;
+  background: #e9ecef;
+  white-space: nowrap;
+}
+
+.project-card-main .project-card .tags .tag:last-child {
+  margin-right: unset;
 }
 
 @media (min-width: 992px) {
@@ -470,21 +519,11 @@ main .wrapper:nth-child(2) {
   margin: 30px 0;
 }
 
-.experience-card-main .experience-card {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-  padding: 20px 50px;
-}
-
-.experience-card-main .experience-card:hover {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-}
-
 .experience-card-main .experience-card .experience-card-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .experience-card-main .experience-card .experience-card-name .experience-card-name-left-logo {
@@ -496,8 +535,17 @@ main .wrapper:nth-child(2) {
   width: 100%;
 }
 
+.experience-card-main .experience-card .experience-card-name .experience-card-name-right {
+  margin-left: 20px;
+}
+
+.experience-card-main .experience-card .experience-card-desc ul {
+  padding: 15px;
+  line-height: 2;
+}
+
 .contact-icon {
-  margin: 15px 0;
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,14 +568,11 @@ main .wrapper:nth-child(2) {
   color: #17a2b8;
 }
 
-section .section-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.wrapper .section-menu {
   overflow: hidden;
 }
 
-section .section-menu span {
+.wrapper .section-menu span {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -537,11 +582,10 @@ section .section-menu span {
           align-items: center;
 }
 
-section .section-menu span::after {
+.wrapper .section-menu span::after {
   content: "";
   position: absolute;
   left: calc(100% + 10px);
-  top: 50%;
   width: 2000px;
   height: 2px;
   background: -webkit-gradient(linear, left top, right top, from(#2b5876), to(#4e4376));

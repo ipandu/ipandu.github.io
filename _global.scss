@@ -30,7 +30,7 @@ h1 {
     font-weight: 700;
 
     @media (min-width: $min-sm) {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -39,6 +39,14 @@ h2 {
 
     @media (min-width: $min-sm) {
         font-size: 2rem ;
+    }
+}
+
+h3 {
+    font-size: 1.2rem;
+
+    @media (min-width: $min-sm) {
+        font-size: 1.4rem ;
     }
 }
 
