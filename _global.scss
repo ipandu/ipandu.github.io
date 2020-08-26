@@ -22,10 +22,24 @@ a {
 }
 
 h1 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-weight: 700;
+
+    @media (min-width: $min-sm) {
+        font-size: 2.7rem;
+    }
 }
 
 h2 {
-    font: 2rem 'Domine', serif;
+    font: 1.8rem 'Domine', serif;
+
+    @media (min-width: $min-sm) {
+        font: 2rem 'Domine', serif;
+    }
+}
+
+p {
+    @media (min-width: $min-sm) {
+        font-size: 1.2rem;
+    }
 }

@@ -21,12 +21,35 @@ a {
 }
 
 h1 {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+}
+
 h2 {
-  font: 2rem 'Domine', serif;
+  font: 1.8rem 'Domine', serif;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font: 2rem 'Domine', serif;
+  }
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.svg {
+  color: red;
+  font-size: 5rem;
 }
 
 .container {
@@ -41,15 +64,17 @@ h2 {
   }
 }
 
-.header {
+.container.header, .container.footer {
   background: -webkit-gradient(linear, left top, right top, from(#2b5876), to(#4e4376));
   background: linear-gradient(to right, #2b5876, #4e4376);
+}
+
+.container.header {
   height: 100vh;
 }
 
-.footer {
-  background: -webkit-gradient(linear, left top, right top, from(#2b5876), to(#4e4376));
-  background: linear-gradient(to right, #2b5876, #4e4376);
+.container.footer {
+  height: 50px;
   text-align: center;
 }
 
@@ -119,8 +144,7 @@ h2 {
     padding-top: 40px;
     top: 0;
     right: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#2b5876), to(#4e4376));
-    background: linear-gradient(to right, #2b5876, #4e4376);
+    background: #17a2b8;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -128,8 +152,8 @@ h2 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-clip-path: circle(50px at 93% -10%);
-            clip-path: circle(50px at 93% -10%);
+    -webkit-clip-path: circle(0 at 92.2% 3.3%);
+            clip-path: circle(0 at 92.2% 3.3%);
     -webkit-transition: -webkit-clip-path 1.2s ease-out;
     transition: -webkit-clip-path 1.2s ease-out;
     transition: clip-path 1.2s ease-out;
@@ -294,14 +318,13 @@ h2 {
 
 .hero .hero-text h1 {
   color: #212529;
-  margin-bottom: 25px;
+  margin: 30px 0 20px 0;
 }
 
 .hero .hero-text p {
   color: #f8f9fa;
-  font-size: 1.2rem;
-  line-height: 1.9;
-  margin-bottom: 25px;
+  line-height: 2;
+  margin-bottom: 20px;
 }
 
 .hero .hero-img {
@@ -347,6 +370,12 @@ h2 {
         flex-basis: 50%;
     text-align: left;
   }
+  .hero .hero-text h1 {
+    margin-bottom: 20px;
+  }
+  .hero .hero-text p {
+    margin-bottom: 25px;
+  }
   .hero .hero-img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -378,6 +407,11 @@ main.container section:first-child {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.skills-icons div {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
 }
 
 .skills-icons i {

@@ -1,6 +1,12 @@
 @import "variable";
 @import "global";
 
+.svg {
+    color: red;
+    font-size: 5rem;
+}
+
+//* CONTAINER
 .container {
     position: relative;
     padding: 0 15px;
@@ -9,17 +15,21 @@
     @media (min-width: $min-sm) {
         padding: 0 70px;
     }
-}
 
-.header {
-    background: $primaryGradient;
-    height: 100vh;
-}
+    &.header, &.footer {
+        background: $gradient;
+    }
 
-.footer {
-    background: $primaryGradient;
-    text-align: center;
+    &.header {
+        height: 100vh;
+    }
+
+    &.footer {
+        height: 50px;
+        text-align: center;
+    }
 }
+//* END CONTAINER
 
 //* HEADER
 //! NAVBAR
@@ -80,10 +90,10 @@
             padding-top: 40px;
             top: 0;
             right: 0;
-            background: $primaryGradient;
+            background: $primary;
             flex-direction: column;
             justify-content: flex-start;
-            clip-path: circle(50px at 93% -10%);
+            clip-path: circle(0 at 92.2% 3.3%);
             transition: clip-path 1.2s ease-out;
             z-index: 2;
             opacity: 0.9;
@@ -222,14 +232,13 @@
 
         h1 {
             color: $darker;
-            margin-bottom: 25px;
+            margin: 30px 0 20px 0;
         }
 
         p {
             color: $light;
-            font-size: 1.2rem;
-            line-height: 1.9;
-            margin-bottom: 25px;
+            line-height: 2;
+            margin-bottom: 20px;
         }
     }
 
@@ -258,6 +267,14 @@
             order: 0;
             flex-basis: 50%;
             text-align: left;
+
+            h1 {
+                margin-bottom: 20px;
+            }
+    
+            p {
+                margin-bottom: 25px;
+            }
         }
 
         .hero-img {
@@ -288,6 +305,10 @@ main.container {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
+    div {
+        flex-basis: 100px;
+    }
 
     i {
         font-size: 5em;
@@ -395,7 +416,7 @@ section {
                 top: 50%;
                 width: 2000px;
                 height: 2px;
-                background: $primaryGradient;
+                background: $gradient;
             }
         }
     }
