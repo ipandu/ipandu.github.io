@@ -13,6 +13,7 @@
 body {
   font: 400 1rem/1.5 'Open Sans', sans-serif;
   color: #343a40;
+  background-color: #e9ecef;
 }
 
 a {
@@ -52,12 +53,6 @@ h3 {
 @media (min-width: 768px) {
   h3 {
     font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  p {
-    font-size: 1.2rem;
   }
 }
 
@@ -338,14 +333,35 @@ main .wrapper:last-child {
 }
 
 .hero .hero-text h1 {
-  color: #17a2b8;
+  position: relative;
+  display: inline-block;
+  color: #f8f9fa;
   margin: 30px 0 20px 0;
+  text-shadow: -1px 1px #212529;
+  z-index: 0;
+}
+
+.hero .hero-text h1::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  right: 10px;
+  top: 18px;
+  bottom: 5px;
+  background: #17a2b8;
+  z-index: -1;
 }
 
 .hero .hero-text p {
   color: #f8f9fa;
   line-height: 2;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-text p {
+    font-size: 1.2rem;
+  }
 }
 
 .hero .hero-img {
@@ -436,21 +452,17 @@ main .wrapper:last-child {
   color: #17a2b8;
 }
 
-.project-card, .experience-card {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
-  padding: 20px 50px;
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
-  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
-  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+.project-card-main, .experience-card-main {
+  margin: 30px 0;
 }
 
-.project-card:hover, .experience-card:hover {
-  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+.project-card, .experience-card {
+  background-color: #f8f9fa;
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  margin: 5px 0;
+  border-radius: 5px;
 }
 
 .project-card-main {
@@ -462,12 +474,27 @@ main .wrapper:last-child {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  margin: 30px 0;
 }
 
 .project-card-main .project-card {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.9, 0.22, 1);
+  cursor: pointer;
+}
+
+.project-card-main .project-card:hover {
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.project-card-main .project-card .project-name, .project-card-main .project-card .project-desc {
+  margin-bottom: 10px;
 }
 
 .project-card-main .project-card .tags {
@@ -492,6 +519,10 @@ main .wrapper:last-child {
   white-space: nowrap;
 }
 
+.project-card-main .project-card .tags .tag:first-child {
+  margin-left: unset;
+}
+
 .project-card-main .project-card .tags .tag:last-child {
   margin-right: unset;
 }
@@ -505,9 +536,6 @@ main .wrapper:last-child {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .project-card-main .project-card {
     -ms-flex-preferred-size: 49.3%;
@@ -515,15 +543,11 @@ main .wrapper:last-child {
   }
 }
 
-.experience-card-main {
-  margin: 30px 0;
-}
-
 .experience-card-main .experience-card .experience-card-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .experience-card-main .experience-card .experience-card-name .experience-card-name-left-logo {
@@ -540,7 +564,7 @@ main .wrapper:last-child {
 }
 
 .experience-card-main .experience-card .experience-card-desc ul {
-  padding: 15px;
+  margin: 10px 30px;
   line-height: 2;
 }
 

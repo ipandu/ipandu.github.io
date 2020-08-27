@@ -14,6 +14,7 @@
 body {
     font: 400 1rem/1.5 'Open Sans', sans-serif;
     color: $dark;
+    background-color: $lighter;
 }
 
 a {
@@ -50,8 +51,8 @@ h3 {
     }
 }
 
-p {
-    @media (min-width: $min-sm) {
-        font-size: 1.2rem;
-    }
-}
+// p {
+//     @media (min-width: $min-sm) {
+//         font-size: 1.2rem;
+//     }
+// }
