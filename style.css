@@ -74,9 +74,18 @@ h3 {
   background: linear-gradient(to right, #2b5876, #4e4376);
 }
 
-.wrapper.footer {
-  height: 50px;
+.wrapper.contact, .wrapper.footer {
   text-align: center;
+  color: #f8f9fa;
+}
+
+.wrapper.contact {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.wrapper.footer {
+  padding-bottom: 20px;
 }
 
 .navbar {
@@ -457,7 +466,7 @@ main .wrapper:last-child {
   color: #17a2b8;
 }
 
-.project-card-main, .experience-card-main, .skills-icons {
+.project-card-main, .experience-card-main, .skills-icons, .contact-info {
   margin: 30px 0;
 }
 
@@ -573,7 +582,25 @@ main .wrapper:last-child {
   line-height: 2;
 }
 
-.contact-list {
+.contact-info {
+  margin-bottom: 0;
+}
+
+.contact-info > *:not(:last-child) {
+  margin: 20px 0;
+}
+
+.contact-info > :last-child {
+  padding-top: 20px;
+}
+
+.contact-info .profile-photo img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+
+.contact-info .contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,10 +612,9 @@ main .wrapper:last-child {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 15px 0;
 }
 
-.contact-list .contact-icon {
+.contact-info .contact-list .contact-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,49 +634,45 @@ main .wrapper:last-child {
   margin: 5px;
 }
 
-.contact-list .contact-icon:first-child {
+.contact-info .contact-list .contact-icon:first-child {
   margin-left: unset;
 }
 
-.contact-list .contact-icon:last-child {
+.contact-info .contact-list .contact-icon:last-child {
   margin-right: unset;
 }
 
-.contact-list .contact-icon.github:hover, .contact-list .contact-icon.linkedin:hover, .contact-list .contact-icon.google:hover, .contact-list .contact-icon.instagram:hover, .contact-list .contact-icon.facebook:hover, .contact-list .contact-icon.twitter:hover {
+.contact-info .contact-list .contact-icon.github:hover, .contact-info .contact-list .contact-icon.linkedin:hover, .contact-info .contact-list .contact-icon.google:hover, .contact-info .contact-list .contact-icon.instagram:hover, .contact-info .contact-list .contact-icon.facebook:hover, .contact-info .contact-list .contact-icon.twitter:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.contact-list .contact-icon.github {
+.contact-info .contact-list .contact-icon.github {
   background-color: #333;
 }
 
-.contact-list .contact-icon.linkedin {
+.contact-info .contact-list .contact-icon.linkedin {
   background-color: #0e76a8;
 }
 
-.contact-list .contact-icon.google {
+.contact-info .contact-list .contact-icon.google {
   background-color: #ea4335;
 }
 
-.contact-list .contact-icon.instagram {
+.contact-info .contact-list .contact-icon.instagram {
   background-color: #e1306c;
 }
 
-.contact-list .contact-icon.facebook {
+.contact-info .contact-list .contact-icon.facebook {
   background-color: #3b5998;
 }
 
-.contact-list .contact-icon.twitter {
+.contact-info .contact-list .contact-icon.twitter {
   background-color: #1da1f2;
 }
 
-.contact-list .contact-icon .fab {
-  color: #f8f9fa;
-}
-
-.wrapper.contact {
-  text-align: center;
+.footer i.fas:last-child {
+  color: #e31b23;
 }
 
 .wrapper .section-menu {

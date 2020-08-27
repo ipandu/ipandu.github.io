@@ -15,9 +15,18 @@
         background: $gradient;
     }
 
-    &.footer {
-        height: 50px;
+    &.contact, &.footer {       
         text-align: center;
+        color: $light;
+    }
+
+    &.contact {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    &.footer {
+        padding-bottom: 20px;
     }
 }
 //* END CONTAINER
@@ -341,7 +350,7 @@ main {
 //! END SKILL
 
 //! PROJECTS & EXPERIENCE CARD
-.project-card-main, .experience-card-main, .skills-icons {
+.project-card-main, .experience-card-main, .skills-icons, .contact-info {
     margin: 30px 0;
 }
 
@@ -441,71 +450,89 @@ main {
 //! END EXPERIENCE
 
 //! CONTACT
-.contact-list {
-    @include flex-center;
-    padding: 15px 0;
+.contact-info {
+    margin-bottom: 0;
+    & > *:not(:last-child) {
+        margin: 20px 0;
+    }
 
-    .contact-icon {
+    & > :last-child {
+        padding-top: 20px;
+    }
+
+    .profile-photo {
+        img {
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    .contact-list {
         @include flex-center;
-        height: 2.8rem;
-        width: 2.8rem;
-        font-size: 1.8rem;
-        border: 2px solid $light;
-        border-radius: 50%;
-        margin: 5px;
-
-        &:first-child {
-            margin-left: unset;
-        }
-
-        &:last-child {
-            margin-right: unset;
-        }
-
-        &.github, &.linkedin, &.google, &.instagram, &.facebook, &.twitter {
-            &:hover {
-                transform: scale(1.15);
+    
+        .contact-icon {
+            @include flex-center;
+            height: 2.8rem;
+            width: 2.8rem;
+            font-size: 1.8rem;
+            border: 2px solid $light;
+            border-radius: 50%;
+            margin: 5px;
+    
+            &:first-child {
+                margin-left: unset;
             }
-        }
-
-        &.github {
-            background-color: #333;
-        }
-
-        &.linkedin {
-            background-color: #0e76a8;
-        }
-
-        &.google {
-            background-color: #ea4335;
-        }
-
-        &.instagram {
-            background-color: #e1306c;
-        }
-
-        &.facebook {
-            background-color: #3b5998;
-        }
-
-        &.twitter {
-            background-color: #1da1f2;
-        }
-
-        .fab {
-            color: $light;
-        }
-    }   
+    
+            &:last-child {
+                margin-right: unset;
+            }
+    
+            &.github, &.linkedin, &.google, &.instagram, &.facebook, &.twitter {
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+    
+            &.github {
+                background-color: #333;
+            }
+    
+            &.linkedin {
+                background-color: #0e76a8;
+            }
+    
+            &.google {
+                background-color: #ea4335;
+            }
+    
+            &.instagram {
+                background-color: #e1306c;
+            }
+    
+            &.facebook {
+                background-color: #3b5998;
+            }
+    
+            &.twitter {
+                background-color: #1da1f2;
+            }
+        }   
+    }
 }
 //! END CONTACT
 //* END MAIN
 
-//* SECTION MENU TITLE
-.wrapper {
-    &.contact {
-        text-align: center;
+//* FOOTER
+.footer i.fas {
+    &:last-child {
+        color: #e31b23;
     }
+}
+//* END FOOTER
 
+//* SECTION MENU TITLE
+.wrapper {   
     .section-menu {
         overflow: hidden;
 
