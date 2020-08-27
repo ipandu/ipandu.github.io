@@ -19,6 +19,7 @@ body {
 a {
   text-decoration: none;
   background-color: transparent;
+  color: unset;
 }
 
 h1, h2 {
@@ -424,13 +425,12 @@ main .wrapper:last-child {
 }
 
 .skills-icons {
-  margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -439,8 +439,13 @@ main .wrapper:last-child {
 }
 
 .skills-icons div {
-  -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.skills-icons div svg {
+  width: 4em;
+  height: 4em;
 }
 
 .skills-icons i {
@@ -452,7 +457,7 @@ main .wrapper:last-child {
   color: #17a2b8;
 }
 
-.project-card-main, .experience-card-main {
+.project-card-main, .experience-card-main, .skills-icons {
   margin: 30px 0;
 }
 
@@ -568,28 +573,84 @@ main .wrapper:last-child {
   line-height: 2;
 }
 
-.contact-icon {
-  padding: 15px 0;
+.contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 15px 0;
 }
 
-.contact-icon i {
-  font-size: 4em;
-  margin: 0 15px;
+.contact-list .contact-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 2.8rem;
+  width: 2.8rem;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  margin: 5px;
 }
 
-.contact-icon i:hover {
-  color: #17a2b8;
+.contact-list .contact-icon:first-child {
+  margin-left: unset;
+}
+
+.contact-list .contact-icon:last-child {
+  margin-right: unset;
+}
+
+.contact-list .contact-icon.github:hover, .contact-list .contact-icon.linkedin:hover, .contact-list .contact-icon.google:hover, .contact-list .contact-icon.instagram:hover, .contact-list .contact-icon.facebook:hover, .contact-list .contact-icon.twitter:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background-color: #343a40;
+}
+
+.contact-list .contact-icon.github {
+  background-color: #333;
+}
+
+.contact-list .contact-icon.linkedin {
+  background-color: #0e76a8;
+}
+
+.contact-list .contact-icon.google {
+  background-color: #ea4335;
+}
+
+.contact-list .contact-icon.instagram {
+  background-color: #e4405f;
+}
+
+.contact-list .contact-icon.facebook {
+  background-color: #3b5998;
+}
+
+.contact-list .contact-icon.twitter {
+  background-color: #1da1f2;
+}
+
+.contact-list .contact-icon .fab {
+  color: #f8f9fa;
+}
+
+.wrapper.contact {
+  text-align: center;
 }
 
 .wrapper .section-menu {

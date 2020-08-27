@@ -20,6 +20,7 @@ body {
 a {
     text-decoration: none;
     background-color: transparent;
+    color: unset;
 }
 
 h1, h2 {
@@ -50,9 +51,3 @@ h3 {
         font-size: 1.4rem ;
     }
 }
-
-// p {
-//     @media (min-width: $min-sm) {
-//         font-size: 1.2rem;
-//     }
-// }

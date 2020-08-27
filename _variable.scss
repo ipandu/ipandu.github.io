@@ -18,3 +18,10 @@ $max-sm: 767.98px;
 $max-md: 991.98px;
 $max-lg: 1199.98px;
 $max-xxl: 1399.98px;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

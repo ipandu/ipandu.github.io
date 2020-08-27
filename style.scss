@@ -318,14 +318,15 @@ main {
 
 //! SKILL
 .skills-icons {
-    margin: 15px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flex-center;
 
     div {
-        flex-basis: 100px;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+        svg {
+            width: 4em;
+            height: 4em;
+        }
     }
 
     i {
@@ -340,7 +341,7 @@ main {
 //! END SKILL
 
 //! PROJECTS & EXPERIENCE CARD
-.project-card-main, .experience-card-main {
+.project-card-main, .experience-card-main, .skills-icons {
     margin: 30px 0;
 }
 
@@ -440,27 +441,71 @@ main {
 //! END EXPERIENCE
 
 //! CONTACT
-.contact-icon {
+.contact-list {
+    @include flex-center;
     padding: 15px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
 
-    i {
-        font-size: 4em;
-        margin: 0 15px;
+    .contact-icon {
+        @include flex-center;
+        height: 2.8rem;
+        width: 2.8rem;
+        font-size: 1.8rem;
+        border-radius: 50%;
+        margin: 5px;
 
-        &:hover {
-            color: $primary;
+        &:first-child {
+            margin-left: unset;
         }
-    }
+
+        &:last-child {
+            margin-right: unset;
+        }
+
+        &.github, &.linkedin, &.google, &.instagram, &.facebook, &.twitter {
+            &:hover {
+                transform: translateY(-3px);
+                background-color: $dark;
+            }
+        }
+
+        &.github {
+            background-color: #333;
+        }
+
+        &.linkedin {
+            background-color: #0e76a8;
+        }
+
+        &.google {
+            background-color: #ea4335;
+        }
+
+        &.instagram {
+            background-color: #e4405f;
+        }
+
+        &.facebook {
+            background-color: #3b5998;
+        }
+
+        &.twitter {
+            background-color: #1da1f2;
+        }
+
+        .fab {
+            color: $light;
+        }
+    }   
 }
 //! END CONTACT
 //* END MAIN
 
 //* SECTION MENU TITLE
 .wrapper {
+    &.contact {
+        text-align: center;
+    }
+
     .section-menu {
         overflow: hidden;
 
