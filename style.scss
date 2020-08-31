@@ -34,15 +34,42 @@
 //* HEADER
 //! NAVBAR
 .navbar {
+    position: relative;
     width: 100%;
     height: 100px;
+    @include flex-center;
+
+    .nav-brand {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        width: 80%;
+        height: 24px;
+        color: $dark;
+        font: 1.5rem 'Caveat', cursive;
+
+        @media (min-width: $min-sm) {
+            left: 70px;
+        }
+
+        @media (min-width: $min-md) {
+            position: relative;
+            top: unset;
+            left: unset;
+            width: 27%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
 
     .nav-items {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        width: 100%;
+        width: 73%;
         height: 100%;
 
         .nav-link {
@@ -53,12 +80,6 @@
             margin-right: 15px;
             color: $light;
             z-index: 0;
-
-            &:first-child {
-                margin-right: auto;
-                color: $dark;
-                font: 1.5rem 'Caveat', cursive;
-            }
 
             &:last-child {
                 margin-right: 0;
@@ -77,23 +98,24 @@
                 transition: width 0.3s cubic-bezier(0.21, 0.9, 0.22, 1);
             }
 
-            &:hover:not(:first-child)::after {
+            &:hover::after {
                 width: 100%;
                 transition: width 0.8s cubic-bezier(0.21, 0.9, 0.22, 1);
             }
         }
     }
 
-    @media (max-width: $max-xs) {
+    @media (max-width: $max-md) {
         .nav-items {
             position: fixed;
-            padding-top: 40px;
+            padding-top: 55px;
+            width: 100%;
             top: 0;
             right: 0;
             background: $primary;
             flex-direction: column;
             justify-content: flex-start;
-            clip-path: circle(0 at 92.2% 3.3%);
+            clip-path: circle(0 at calc(100% - 35px) 25px);
             transition: clip-path 1.2s ease-out;
             z-index: 2;
             opacity: 0.9;
@@ -105,26 +127,22 @@
                 margin-right: 0;
 
                 &:nth-child(1) {
-                    display: none;
-                }
-
-                &:nth-child(2) {
                     transition: opacity 0.5s ease 0.2s, transform 1.2s ease;
                 }
 
-                &:nth-child(3) {
+                &:nth-child(2) {
                     transition: opacity 0.5s ease 0.3s, transform 1.2s ease;
                 }
 
-                &:nth-child(4) {
+                &:nth-child(3) {
                     transition: opacity 0.5s ease 0.4s, transform 1.2s ease;
                 }
 
-                &:nth-child(5) {
+                &:nth-child(4) {
                     transition: opacity 0.5s ease 0.5s, transform 1.2s ease;
                 }
 
-                &:nth-child(6) {
+                &:nth-child(5) {
                     transition: opacity 0.5s ease 0.6s, transform 1.2s ease;
                 }
 
@@ -161,13 +179,13 @@
             }
 
             &.open {
-                clip-path: circle(70vh at 50% 50%);
+                clip-path: circle(90vh at 50% 50%);
             }
         }
 
         .nav-toggle {
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 15px;
             display: flex;
             flex-direction: column;
@@ -212,9 +230,19 @@
 
             &.open {
                 position: fixed;
-                top: 10px;
+                top: 20px;
                 right: 15px;
             }
+        }
+    }
+    
+    @media (min-width: $min-sm) and (max-width: $min-md) {
+        .nav-toggle {
+            right: 60px;
+        }
+
+        &.open {
+            right: 60px;
         }
     }
 }
@@ -254,7 +282,7 @@ main {
             position: relative;
             display: inline-block;
             color: $light;
-            margin: 30px 0 20px 0;
+            margin: 25px 0 20px 0;
             text-shadow: -1px 1px $darker;
             z-index: 0;
 
@@ -288,16 +316,25 @@ main {
         margin-bottom: 30px;
 
         .hero-img-detail {
-            width: 70%;
+            width: 63%;
             height: auto;
 
-            @media (min-width: $min-xs) and (max-width: $max-sm) {
+            @media (min-width: $min-xs) {
                 width: 50%;
             }
+
+            @media (min-width: $min-sm){
+                width: 38%;
+            }
+
+            @media (min-width: $min-md){
+                width: 63%;
+            }
+
         }
     }
 
-    @media (min-width: $min-sm) {
+    @media (min-width: $min-md) {
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -457,12 +494,13 @@ main {
     }
 
     & > :last-child {
-        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .profile-photo {
         img {
             border-radius: 50%;
+            border: 5px solid $light;
             width: 10rem;
             height: 10rem;
         }
@@ -586,6 +624,31 @@ main {
 
     &:active, &:focus {
         box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+    }
+}
+
+.top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    width: 50px;
+    height: 50px;
+    color: $light;
+    background: $primary;
+    border-radius: 20%;
+    border: none;
+    outline: none;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-out;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:hover {
+        background: $dark;
     }
 }
 //* END BUTTON
