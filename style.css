@@ -596,17 +596,9 @@ main .wrapper:last-child {
 .project-card-main .project-card .tags .tag {
   border-radius: 3px;
   padding: 3px 9px;
-  margin: 5px;
+  margin: 5px 3px;
   background: #e9ecef;
   white-space: nowrap;
-}
-
-.project-card-main .project-card .tags .tag:first-child {
-  margin-left: unset;
-}
-
-.project-card-main .project-card .tags .tag:last-child {
-  margin-right: unset;
 }
 
 @media (min-width: 992px) {

@@ -15,7 +15,7 @@ menuToggle.addEventListener('click', () => {
     })
 })
 
-//* Top Button
+//* TOP BUTTON
 const topBtn = document.querySelector('.top-btn');
 window.onscroll = function() {
     scrollFunction();
@@ -28,3 +28,13 @@ function scrollFunction() {
         topBtn.style.display = "none";
     }
 }
+
+//* PROJECT CARD HREF 
+const projectCards = document.querySelectorAll('.project-card-main .project-card');
+
+projectCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const projectCardHref = card.dataset.hrefProject;
+        window.open(projectCardHref, '_blank')
+    })
+})
