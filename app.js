@@ -23,10 +23,8 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        console.log('1');
         topBtn.style.display = "flex";
     } else {
-        console.log('0');
         topBtn.style.display = "none";
     }
 }
