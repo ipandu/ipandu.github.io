@@ -1,7 +1,7 @@
 # ipandu.github.io
 **My personal website portfolio**
 
-## Section 
+## Sections
 * Summary & About me
 * Experience
 * Projects
@@ -18,10 +18,10 @@
 * [SASS](https://sass-lang.com/)
 * [Microtip](https://github.com/ghosh/microtip)
 
+## Illustration
+* [unDraw](https://undraw.co/)
+
 ## Icons
 * [Font Awesome](https://fontawesome.com/)
 * [Iconify](https://iconify.design/)
 * [Freeicons.io](https://www.freeicons.io/)
-
-## Illustration
-* [unDraw](https://undraw.co/)
