@@ -16,6 +16,7 @@
 
 ## Technologies
 * [SASS](https://sass-lang.com/)
+* [AOS](http://michalsnik.github.io/aos/)
 * [Microtip](https://github.com/ghosh/microtip)
 
 ## Illustration

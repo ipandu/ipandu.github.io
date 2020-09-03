@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
         <link
             rel="shortcut icon"
             href="Images/favicon.png"
@@ -42,7 +43,7 @@
         </header>
         <main>
             <section class="wrapper gradient hero">
-                <div class="hero-text">
+                <div class="hero-text" data-aos="fade-up-right">
                     <h1>Ilham Pandu Yuwono</h1>
                     <p>
                         A passionate junior Software Developer who extremely
@@ -56,7 +57,7 @@
                         >My Resume</a
                     >
                 </div>
-                <figure class="hero-img">
+                <figure class="hero-img" data-aos="fade-down-left">
                     <img
                         class="hero-img-detail"
                         src="Images/undraw_startup_life.svg"
@@ -65,10 +66,10 @@
                 </figure>
             </section>
             <section id="experience" class="wrapper">
-                <h2 class="section-menu">
+                <h2 class="section-menu" data-aos="zoom-in">
                     <span><span>Experience</span></span>
                 </h2>
-                <div class="experience-card-main">
+                <div class="experience-card-main" data-aos="fade-up">
                     <div class="experience-card">
                         <div class="experience-card-name">
                             <div class="experience-card-name-left">
@@ -110,14 +111,14 @@
                 </div>
             </section>
             <section id="projects" class="wrapper">
-                <h2 class="section-menu">
+                <h2 class="section-menu" data-aos="zoom-in">
                     <span><span>Projects</span></span>
                 </h2>
                 <div class="project-card-main">
                     <div
                         class="project-card"
                         data-href-project="https://github.com/ipandu/ipandu.github.io"
-                    >
+                        data-aos="fade-up" >
                         <h3 class="project-name">Ipand Portfolio</h3>
                         <p class="project-desc">
                             My personal website/portfolio.
@@ -126,7 +127,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">SIMASET</h3>
                         <p class="project-desc">
                             Lion Air Group Training Center assets management
@@ -140,7 +141,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">Blog Lion Air Group</h3>
                         <p class="project-desc">
                             Lion Air Group information blog.
@@ -153,7 +154,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">AAS Budget</h3>
                         <p class="project-desc">
                             Angkasa Aviation Service budgeting management
@@ -167,7 +168,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">AAS Avsec Report</h3>
                         <p class="project-desc">
                             Angkasa Aviation Service daily AVSEC reporting
@@ -181,7 +182,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">AAS Stock Opname</h3>
                         <p class="project-desc">
                             Angkasa Aviation Service daily stock opname
@@ -195,7 +196,7 @@
                             <span class="tag">Web Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">
                             Kinect Pengukur Sudut Rukuk
                         </h3>
@@ -210,7 +211,7 @@
                             <span class="tag">Desktop Application</span>
                         </div>
                     </div>
-                    <div class="project-card" data-href-project="#">
+                    <div class="project-card" data-href-project="#" data-aos="fade-up">
                         <h3 class="project-name">iPhoneku</h3>
                         <p class="project-desc">
                             Augmented reality application brochure iphone
@@ -226,10 +227,10 @@
                 </div>
             </section>
             <section id="skills" class="wrapper">
-                <h2 class="section-menu">
+                <h2 class="section-menu" data-aos="zoom-in">
                     <span><span>Skills</span></span>
                 </h2>
-                <div class="skills-icons">
+                <div class="skills-icons" data-aos="fade-up">
                     <div
                         name="net"
                         aria-label=".NET"
@@ -2050,8 +2051,8 @@
                 </div>
             </section>
             <section id="contact" class="wrapper gradient contact">
-                <h2 class="section-menu">Get In Touch</h2>
-                <div class="contact-info">
+                <h2 class="section-menu" data-aos="zoom-in">Get In Touch</h2>
+                <div class="contact-info" data-aos="fade-up">
                     <figure class="profile-photo">
                         <img
                             src="Images/myphoto.jpg"
@@ -2108,6 +2109,7 @@
         <a href="#home" class="top-btn" title="Go to top"
             ><i class="fas fa-chevron-up"></i
         ></a>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

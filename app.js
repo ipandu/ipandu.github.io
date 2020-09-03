@@ -1,3 +1,8 @@
+//* INIT AOS
+AOS.init({
+    duration: 600,
+});
+
 //* NAVBAR
 const menuToggle = document.querySelector(".nav-toggle");
 const menuToggleLine = document.querySelectorAll(".nav-toggle .line");
