@@ -39,7 +39,7 @@ const projectCards = document.querySelectorAll('.project-card-main .project-card
 
 projectCards.forEach(card => {
     card.addEventListener('click', () => {
-        const projectCardHref = card.dataset.hrefProject;
+        const projectCardHref = card.querySelector('a').href;
         window.open(projectCardHref, '_blank')
     })
 })
