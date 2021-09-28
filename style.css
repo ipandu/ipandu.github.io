@@ -631,6 +631,7 @@ main .wrapper:last-child {
 
 .experience-card-main .experience-card .experience-card-name .experience-card-name-left-logo img {
   width: 100%;
+  height: 100%;
 }
 
 .experience-card-main .experience-card .experience-card-name .experience-card-name-right {
